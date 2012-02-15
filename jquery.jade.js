@@ -47,7 +47,7 @@
 		}
 	};
 
-	var inc = Math.floor(Math.random()*10000);
+	var inc = 0;
 	$.fn.jade = function(locals) {
 		var $tmpl = $(this[0]);
 		// i guess an empty string makes sense here?
@@ -55,7 +55,7 @@
 
 		var name = $tmpl.data('jade-tpl-name');
 		if (!name) {
-			$tmpl.data('jade-tpl-name', (name = 'jade-tpl' + ++inc));
+			$tmpl.data('jade-tpl-name', (name = 'jade-tpl-' + ++inc));
 		}
 
 		var raw = $.jade(name, $tmpl.text(), locals || {});

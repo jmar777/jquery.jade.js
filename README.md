@@ -16,7 +16,7 @@ Jade for jQuery is a lightweight jQuery plugin providing a friendly API for usin
 
 ## Getting Started
 
-Some simple examples of using jade for jQuery are provided below. Please note that some working example pages are
+Some simple examples of using Jade for jQuery are provided below. Please note that some working example pages are
 also provided in `/examples`.
 
 ### Basic Usage
@@ -57,5 +57,6 @@ cache key for the compiled template:
 
 ## Licensing
 
-Copyright 2012, Jeremy Martin <http://github.com/jmar777>
+Copyright 2012, Jeremy Martin (http://github.com/jmar777)
+
 Dual licensed under the MIT or GPL Version 2 licenses.

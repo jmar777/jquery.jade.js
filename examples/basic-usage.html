@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jade for jQuery Example</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jade.js"></script>
+		<script type="text/javascript" src="../jquery.jade.js"></script>
+		
+		<!-- templates can be defined inline -->
+		<script id="developer-template" type="text/x-jade">
+h2= name
+ul
+	li: a(href='http://github.com/#{github}') Github
+	li: a(href='http://twitter.com/#{twitter}') Twitter
+		</script>
+
+		<script type="text/javascript">
+			var developer = { name: 'Jeremy', github: 'jmar777', twitter: 'jmar777' };
+			// $().jade(data) returns a jQuery object containing the rendered DOM nodes
+			$('#developer-template').jade(developer).appendTo('body');
+
+			// $().jade(data) can handle an array of data as well (each item gets rendered sequentially)
+			var developers = [
+				{ name: 'Chris', github: 'chrisdavies', twitter: 'chrisdaviesparc' },
+				{ name: 'Bryan', github: 'gilbertw1', twitter: 'bryangilbert' }
+			];
+			$('#developer-template').jade(developers).appendTo('body');
+		</script>
+	</body>
+</html>

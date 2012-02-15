@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jade for jQuery Example</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jade.js"></script>
+		<script type="text/javascript" src="../jquery.jade.js"></script>
+		
+		<script type="text/javascript">
+			// simple usage with caching - by providing a template name, all subsequent renders
+			// using the same template name will render with a cached version of the compiled template
+			var template = 'h1 Hello #{name}, I\'m cached!',
+				data = { name: 'World' },
+				templateName = 'header-template',
+				html = $.jade(templateName, template, data);
+			$('body').append(html);
+		</script>
+	</body>
+</html>

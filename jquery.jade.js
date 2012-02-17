@@ -1,5 +1,5 @@
 /*!
- * jQuery Jade Plugin v0.1.0
+ * jQuery Jade Plugin v0.1.1
  * http://github.com/jmar777/jquery.jade.js
  * Requires:
  *  - jQuery >= 1.4.2 (http://jquery.com)
@@ -50,8 +50,7 @@
 	var inc = 0;
 	$.fn.jade = function(locals) {
 		var $tmpl = $(this[0]);
-		// i guess an empty string makes sense here?
-		if (!$tmpl.length) return '';
+		if (!$tmpl.length) return $([]);
 
 		var name = $tmpl.data('jade-tpl-name');
 		if (!name) {

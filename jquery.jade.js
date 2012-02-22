@@ -11,7 +11,11 @@
 (function($) {
 
 	// for storing compiled templates
-	var cache = {};
+	var cache = {},
+		// matches templates that are all whitespace
+		wsReg = /^\s*$/,
+		// matches the first line with template markup, and captures any indentation
+		firstMarkupReg = /([ \t]*)[^ \t\r\n]/;
 	// compile a given template, and cache it if a non-falsy name was provided
 	var compile = function(name, template) {
 		// is this a named template?
@@ -19,7 +23,17 @@
 			// then we're caching
 			return cache[name] || (cache[name] = compile(undefined, template));
 		} else {
-			// no name, just compile it
+			// don't brick on all whitespace templates
+			if (wsReg.test(template)) { template = ''; }
+
+			// allow for indented template markup
+			var firstMarkupLine = template.match(firstMarkupReg);
+			if (firstMarkupLine) {
+				var wsLength = firstMarkupLine[1].length,
+					reg = new RegExp('^[ \\t]{' + wsLength + '}', 'gm');
+				template = template.replace(reg, '');
+			}
+
 			return jade.compile(template);
 		}
 	}

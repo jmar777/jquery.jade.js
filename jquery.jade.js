@@ -53,7 +53,7 @@
 		if (Array.isArray(locals)) {
 			var buf = [];
 			for (var i = 0, len = locals.length; i < len; i++) {
-				buf.push($.jade(template, locals[i]));
+				buf.push($.jade(name, template, locals[i]));
 			}
 			return buf.join('');
 		} else {

@@ -1,5 +1,5 @@
 /*!
- * jQuery Jade Plugin v0.1.1
+ * jQuery Jade Plugin v0.1.2
  * http://github.com/jmar777/jquery.jade.js
  * Requires:
  *  - jQuery >= 1.4.2 (http://jquery.com)

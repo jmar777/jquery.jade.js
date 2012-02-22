@@ -26,7 +26,7 @@ will not be executed as javascript, and is instead available to use as template 
 
 ```html
 <script id='my-template' type='text/x-jade'>
-h1 Hello #{name}!
+    h1 Hello #{name}!
 </script>
 ```
 

@@ -66,7 +66,6 @@ console.log(html); // '<h1>Hello World!</h1>'
 
 ## Todo
 
-  * Allow template markup inside of script tags to be indented
   * A test suite
 
 ## Licensing

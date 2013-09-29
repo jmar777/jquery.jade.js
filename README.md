@@ -70,6 +70,6 @@ console.log(html); // '<h1>Hello World!</h1>'
 
 ## Licensing
 
-Copyright 2012, Jeremy Martin (http://github.com/jmar777)
+Copyright 2013, Jeremy Martin (http://github.com/jmar777)
 
 Dual licensed under the MIT or GPL Version 2 licenses.
